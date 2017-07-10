@@ -1,8 +1,9 @@
 # encoding: utf-8
 require "logstash/filters/base"
 require "logstash/namespace"
+require "nokogiri"
 
-# This  filter will replace the contents of the default 
+# This  filter will replace the contents of the default
 # message field with whatever you specify in the configuration.
 #
 # It is only intended to be used as an .
@@ -18,14 +19,14 @@ class LogStash::Filters::Htmlcleaner < LogStash::Filters::Base
   # }
   #
   config_name "htmlcleaner"
-  
+
   # Replace the message with this value.
   config :message, :validate => :string, :default => "Hello World!"
-  
+
 
   public
   def register
-    # Add instance variables 
+    # Add instance variables
   end # def register
 
   public
@@ -34,7 +35,7 @@ class LogStash::Filters::Htmlcleaner < LogStash::Filters::Base
     if @message
       # Replace the event message with our message as configured in the
       # config file.
-      event.set("message", @message)
+      event.set("conteudo_limpo", Nokogiri::HTML(event.get("attachment.content")).text)
     end
 
     # filter_matched should go in the last line of our successful code
