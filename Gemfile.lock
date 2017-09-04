@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/elastic/logstash.git
-  revision: b97b17de85c34dcf925dcc1cb521d59360615265
-  branch: 5.2
+  revision: f83c1e7eb20dac4e3cfd057bab1ae7441e843daf
+  branch: 5.5
   specs:
 
 PATH
@@ -9,7 +9,7 @@ PATH
   specs:
     logstash-filter-htmlcleaner (0.1.0)
       logstash-core-plugin-api (>= 1.60, <= 2.99)
-      nokogiri (= 1.7.0.1)
+      nokogiri (= 1.8.0)
 
 GEM
   remote: https://rubygems.org/
@@ -67,7 +67,7 @@ GEM
       stud (>= 0.0.20)
     method_source (0.8.2)
     minitar (0.5.4)
-    nokogiri (1.7.0.1-java)
+    nokogiri (1.8.0-java)
     numerizer (0.1.1)
     polyglot (0.3.5)
     pry (0.10.4-java)
@@ -121,7 +121,7 @@ DEPENDENCIES
   logstash (= 1.3.3)!
   logstash-devutils (= 1.3.3)
   logstash-filter-htmlcleaner!
-  nokogiri (= 1.7.0.1)
+  nokogiri (= 1.8.0)
 
 BUNDLED WITH
    1.15.1
